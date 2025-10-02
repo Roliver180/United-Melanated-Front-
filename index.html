@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Melanated Front - Sovereignty. Legacy. Unity.</title>
+    <meta name="description" content="United Melanated Front - Standing in Sovereignty. Building Generational Legacy for melanated people worldwide.">
+    <meta name="keywords" content="UMF, melanated, sovereignty, Indigenous rights, African diaspora, community empowerment">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .bg-pattern {
+            background-image: url('http://static.photos/abstract/1200x630/42');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        
+        .section-divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #F9A825 0%, #7B1FA2 100%);
+            margin: 2rem auto;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black text-white z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    <span class="text-yellow-500">UMF</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-white hover:text-yellow-500">Home</a>
+                    <a href="#about" class="text-white hover:text-yellow-500">About</a>
+                    <a href="#mission" class="text-white hover:text-yellow-500">Mission</a>
+                    <div class="relative group">
+                        <button class="text-white hover:text-yellow-500 flex items-center">
+                            Membership <i data-feather="chevron-down" class="ml-1"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                            <a href="#" class="block px-4 py-2 text-white hover:bg-purple-900">Join UMF</a>
+                            <a href="#" class="block px-4 py-2 text-white hover:bg-purple-900">Member Benefits</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="text-white hover:text-yellow-500 flex items-center">
+                            Initiatives <i data-feather="chevron-down" class="ml-1"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-black rounded-md shadow-lg py-1 z-50 hidden group-hover:block">
+                            <a href="#" class="block px-4 py-2 text-white hover:bg-purple-900">Community Projects</a>
+                            <a href="#" class="block px-4 py-2 text-white hover:bg-purple-900">Education</a>
+                            <a href="#" class="block px-4 py-2 text-white hover:bg-purple-900">Economic Development</a>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-white hover:text-yellow-500">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="#" class="block py-2 text-white hover:text-yellow-500">Home</a>
+                <a href="#about" class="block py-2 text-white hover:text-yellow-500">About</a>
+                <a href="#mission" class="block py-2 text-white hover:text-yellow-500">Mission</a>
+                <div class="py-2">
+                    <button class="text-white hover:text-yellow-500 flex items-center">
+                        Membership <i data-feather="chevron-down" id="membership-arrow" class="ml-1"></i>
+                    </button>
+                    <div id="membership-dropdown" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-2 text-white hover:text-yellow-500">Join UMF</a>
+                        <a href="#" class="block py-2 text-white hover:text-yellow-500">Member Benefits</a>
+                    </div>
+                </div>
+                <div class="py-2">
+                    <button class="text-white hover:text-yellow-500 flex items-center">
+                        Initiatives <i data-feather="chevron-down" id="initiatives-arrow" class="ml-1"></i>
+                    </button>
+                    <div id="initiatives-dropdown" class="hidden pl-4 mt-2">
+                        <a href="#" class="block py-2 text-white hover:text-yellow-500">Community Projects</a>
+                        <a href="#" class="block py-2 text-white hover:text-yellow-500">Education</a>
+                        <a href="#" class="block py-2 text-white hover:text-yellow-500">Economic Development</a>
+                    </div>
+                </div>
+                <a href="#contact" class="block py-2 text-white hover:text-yellow-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="bg-pattern bg-black bg-opacity-70 text-white pt-32 pb-24 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-on-scroll">United Melanated Front</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-on-scroll" style="animation-delay: 0.2s">Standing in Sovereignty. Building Generational Legacy.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll" style="animation-delay: 0.4s">
+                <a href="#" class="bg-yellow-600 hover:bg-yellow-700 text-black font-bold py-3 px-8 rounded-full transition duration-300">Join UMF</a>
+                <a href="#about" class="bg-transparent hover:bg-purple-900 text-white font-bold py-3 px-8 border-2 border-white rounded-full transition duration-300">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">About UMF</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 animate-on-scroll">
+                    <p class="text-lg mb-6">The United Melanated Front (UMF) is a global movement dedicated to the sovereignty and unity of melanated people worldwide. We reject colonial narratives and affirm our Indigenous identity and heritage.</p>
+                    <p class="text-lg mb-6">Our mission is to build generational wealth, protect our communities, and restore our cultural legacy through education, economic development, and collective action.</p>
+                    <p class="text-lg">UMF stands as a beacon of hope and empowerment, creating pathways for self-determination and true liberation for melanated people across the diaspora.</p>
+                </div>
+                <div class="lg:w-1/2 animate-on-scroll" style="animation-delay: 0.2s">
+                    <img src="http://static.photos/people/640x360/10" alt="UMF Community" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section id="mission" class="py-20 bg-purple-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 animate-on-scroll">Our Mission</h2>
+            <div class="max-w-4xl mx-auto animate-on-scroll" style="animation-delay: 0.2s">
+                <p class="text-xl md:text-2xl italic mb-8">"To unite melanated people worldwide in the pursuit of sovereignty, rejecting colonial narratives and reclaiming our Indigenous identity. We build generational legacy through education, economic empowerment, and cultural restoration."</p>
+                <div class="section-divider"></div>
+                <div class="flex flex-wrap justify-center gap-8 mt-12">
+                    <div class="flex flex-col items-center max-w-xs">
+                        <div class="bg-yellow-500 p-4 rounded-full mb-4">
+                            <i data-feather="shield" class="w-8 h-8 text-black"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Protection</h3>
+                        <p class="text-gray-300">Safeguarding our communities and rights</p>
+                    </div>
+                    <div class="flex flex-col items-center max-w-xs">
+                        <div class="bg-yellow-500 p-4 rounded-full mb-4">
+                            <i data-feather="book" class="w-8 h-8 text-black"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Education</h3>
+                        <p class="text-gray-300">Reclaiming our true history and knowledge</p>
+                    </div>
+                    <div class="flex flex-col items-center max-w-xs">
+                        <div class="bg-yellow-500 p-4 rounded-full mb-4">
+                            <i data-feather="dollar-sign" class="w-8 h-8 text-black"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Economics</h3>
+                        <p class="text-gray-300">Building generational wealth and independence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">Membership Benefits</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover animate-on-scroll">
+                    <div class="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i data-feather="shield" class="text-purple-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Legal Empowerment</h3>
+                    <p class="text-gray-700">Access to legal resources and advocacy to protect your rights and sovereignty.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="bg-yellow-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i data-feather="users" class="text-yellow-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Cultural Affirmation</h3>
+                    <p class="text-gray-700">Connect with a global network celebrating and preserving melanated heritage.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover animate-on-scroll" style="animation-delay: 0.4s">
+                    <div class="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i data-feather="heart" class="text-purple-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Community Projects</h3>
+                    <p class="text-gray-700">Participate in initiatives that directly uplift and strengthen our communities.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md card-hover animate-on-scroll" style="animation-delay: 0.6s">
+                    <div class="bg-yellow-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                        <i data-feather="trending-up" class="text-yellow-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Economic Upliftment</h3>
+                    <p class="text-gray-700">Access to business resources, funding opportunities, and collective economics.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12 animate-on-scroll">
+                <a href="#" class="bg-black hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center">
+                    Apply for Membership <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initiatives Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">Our Initiatives</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover animate-on-scroll">
+                    <img src="http://static.photos/education/640x360/5" alt="Education Program" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Education Programs</h3>
+                        <p class="text-gray-700 mb-4">Restoring our true history and providing culturally relevant education for all ages.</p>
+                        <a href="#" class="text-purple-800 font-semibold hover:text-purple-600 flex items-center">
+                            Learn More <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover animate-on-scroll" style="animation-delay: 0.2s">
+                    <img src="http://static.photos/industry/640x360/6" alt="Economic Development" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Economic Development</h3>
+                        <p class="text-gray-700 mb-4">Creating sustainable businesses and financial systems that serve our communities.</p>
+                        <a href="#" class="text-purple-800 font-semibold hover:text-purple-600 flex items-center">
+                            Learn More <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover animate-on-scroll" style="animation-delay: 0.4s">
+                    <img src="http://static.photos/people/640x360/7" alt="Community Protection" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Community Protection</h3>
+                        <p class="text-gray-700 mb-4">Ensuring the safety and well-being of our people through organized efforts.</p>
+                        <a href="#" class="text-purple-800 font-semibold hover:text-purple-600 flex items-center">
+                            Learn More <i data-feather="arrow-right" class="ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-purple-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 animate-on-scroll">Contact UMF</h2>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    <p class="mb-8">Have questions or want to get involved? Reach out to us and a member of our team will respond promptly.</p>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="bg-yellow-500 p-3 rounded-full mr-4">
+                            <i data-feather="mail" class="w-5 h-5 text-black"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Email</h4>
+                            <p>contact@unitedmelanatedfront.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <div class="bg-yellow-500 p-3 rounded-full mr-4">
+                            <i data-feather="phone" class="w-5 h-5 text-black"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-black hover:bg-gray-900 p-3 rounded-full">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-black hover:bg-gray-900 p-3 rounded-full">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-black hover:bg-gray-900 p-3 rounded-full">
+                            <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 animate-on-scroll" style="animation-delay: 0.2s">
+                    <form class="bg-white rounded-lg shadow-xl p-8 text-black">
+                        <div class="mb-6">
+                            <label for="name" class="block font-bold mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block font-bold mb-2">Email Address</label>
+                            <
